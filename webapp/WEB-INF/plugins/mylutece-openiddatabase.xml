@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><plug-in>
+   <name>mylutece-openiddatabase</name>
+   <class>fr.paris.lutece.plugins.mylutece.modules.openiddatabase.service.OpenIDDatabasePlugin</class>
+   <version>0.9.3</version>
+   <description>module.mylutece.openiddatabase.module.description</description>
+   <documentation/>
+   <installation/>
+   <changes/>
+   <user-guide/>
+   <provider>module.mylutece.openiddatabase.module.provider</provider>
+   <provider-url>http://lutece.paris.fr</provider-url>
+   <icon-url>images/admin/skin/plugins/mylutece/mylutece.png</icon-url>
+   <copyright>Copyright 2001-2010 Mairie de Paris</copyright>
+   	<core-version-dependency>
+		<min-core-version/>
+		<max-core-version/>	
+	</core-version-dependency>
+	
+	<!-- if the plugin must have a connection pool with parameter : 1 - yes, 0 - no -->
+   <db-pool-required>1</db-pool-required>
+   
+    <!-- Specific plugin CSS stylesheets -->
+    <css-stylesheets>
+        <css-stylesheet>mylutece/modules/openiddatabase/openid.css</css-stylesheet>
+    </css-stylesheets>
+   
+   <!-- Applications -->
+   <applications>
+       <application>
+           <application-id>myluteceopeniddatabase</application-id>
+           <application-class>fr.paris.lutece.plugins.mylutece.modules.openiddatabase.authentication.web.MyLuteceOpenIdDatabaseApp</application-class>
+       </application>
+   </applications>
+    
+   <!-- Administration interface parameters -->
+   <admin-features>
+     <admin-feature>
+       <feature-id>OPENID_DATABASE_MANAGEMENT_USERS</feature-id>
+       <feature-title>module.mylutece.openiddatabase.adminFeature.database_management_user.name</feature-title>
+       <feature-description>module.mylutece.openiddatabase.adminFeature.database_management_user.description</feature-description>
+       <feature-level>3</feature-level>
+       <feature-url>jsp/admin/plugins/mylutece/modules/openiddatabase/ManageUsers.jsp</feature-url>
+     </admin-feature>
+   </admin-features>
+   
+</plug-in>

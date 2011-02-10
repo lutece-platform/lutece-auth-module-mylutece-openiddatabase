@@ -1,0 +1,59 @@
+
+
+<center>
+    <br/>
+    
+    <h2>#i18n{module.mylutece.openiddatabase.login_form.pageTitle}</h2>
+    
+    
+<form method="post" action="${url_dologin}">
+<div class="hide">
+	<input type="hidden" name="page" value="mylutece" />
+	<input type="hidden" name="action" value="dologin" />
+</div>
+<br/>
+<font color="red"><b>${error_message}</b></font>
+<br/>
+<br/>
+<table width="50%">
+ <tr>
+	<td align="right" ><b>#i18n{module.mylutece.openiddatabase.login_form.labelAccessCode} : </b></td>
+	<td align="left" ><input type="text" name="username" /></td>
+ </tr>
+ <tr>
+	<td align="right" ><b>#i18n{module.mylutece.openiddatabase.login_form.labelPassword} </b></td>
+	<td align="left" ><input type="password" name="password" /></td>
+ </tr>
+</table>
+<br/><br/>
+<input type="submit" name="Submit" value="#i18n{module.mylutece.openiddatabase.login_form.labelButton}" />
+</form>
+<br/>
+<br/>
+    <p align="center">
+        <img src="images/local/skin/plugins/mylutece/modules/openiddatabase/openid.png" />
+    </p>
+    
+    <form name="login" method="post" action="${url_dologin}">
+	    <div class="hide">
+	        <input type="hidden" name="page" value="mylutece" />
+	        <input type="hidden" name="action" value="dologin" />
+	        <input type="hidden" name="password" value="dummy" />
+		</div>
+        <b><font color="#FFAAAA">${error_message}</font></b>
+        <table width="50%">
+            <tr>
+                <td align="right" ><b>#i18n{module.mylutece.openiddatabase.login_form.labelOpenIDCode} : </b></td>
+                <td align="left" ><input class="openid" type="text" name="username" size="30" /></td>
+            </tr>
+        </table>
+        <br/><br/>
+        <div><input type="submit" name="Submit" value="#i18n{module.mylutece.openiddatabase.login_form.labelButton}" /></div>
+    </form>
+    <br/>
+    <br/>
+</center>
+<script language="JavaScript">
+	window.onload = login.username.focus;
+</script>
+

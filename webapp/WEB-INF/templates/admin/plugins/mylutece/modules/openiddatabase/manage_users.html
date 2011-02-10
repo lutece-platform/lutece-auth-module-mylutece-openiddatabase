@@ -1,0 +1,50 @@
+<div class="content-box" >
+    
+    <h2>#i18n{module.mylutece.openiddatabase.manage_users.tableTitle}</h2>
+    
+    <table>
+        <tr>
+            <th>#i18n{module.mylutece.openiddatabase.manage_users.colLogin}</th>
+            <th>#i18n{module.mylutece.openiddatabase.manage_users.colLastName}</th>
+            <th>#i18n{module.mylutece.openiddatabase.manage_users.colFirstName}</th>
+            <th>#i18n{module.mylutece.openiddatabase.manage_users.colEmail}</th>
+			<th>#i18n{module.mylutece.openiddatabase.manage_users.colActions}</th>
+        </tr>
+        <#list user_list as user >
+        <tr>
+   	        <td>
+   	        <#if user.authenticationType =="openid">
+   	        <img src="images/local/skin/plugins/mylutece/modules/openiddatabase/openid-inputicon.gif" class="icon" alt="#i18n{module.mylutece.openiddatabase.manage_users.labelOpenIdUser}" title="#i18n{module.mylutece.openiddatabase.manage_users.labelOpenIdUser}" />
+   	        </#if>
+   	        <#if user.authenticationType =="database">
+   	        <img src="images/local/skin/plugins/mylutece/modules/openiddatabase/database-inputicon.png" class="icon" alt="#i18n{module.mylutece.openiddatabase.manage_users.labelDatabaseUser}" title="#i18n{module.mylutece.openiddatabase.manage_users.labelDatabaseUser}" />
+   	        </#if>
+				<a href="jsp/admin/plugins/mylutece/modules/openiddatabase/ModifyUser.jsp?plugin_name=${plugin_name}&mylutece_database_user_id=${user.userId}">${user.login}</a>
+			</td>
+	        <td>${user.lastName}</td>
+	        <td>${user.firstName}</td>
+	        <td>${user.email}</td>
+	        <td>
+	        	<#if external_application_exist >
+	        	<a href="jsp/admin/plugins/mylutece/ManageExternalApplicationUser.jsp?mylutece_user_id=${user.login}">
+	                <img src="images/admin/skin/actions/publish.png" class="icon" alt="#i18n{module.mylutece.openiddatabase.manage_users.linkManageExternalApplication}" title="#i18n{module.mylutece.openiddatabase.manage_users.linkManageExternalApplication}" />
+	            </a>
+	            </#if>
+	            <a href="jsp/admin/plugins/mylutece/modules/openiddatabase/ManageRolesUser.jsp?plugin_name=${plugin_name}&mylutece_database_user_id=${user.userId}">
+	                <img src="images/admin/skin/actions/rbac.png" class="icon" alt="#i18n{module.mylutece.openiddatabase.manage_users.linkManageRoles}" title="#i18n{module.mylutece.openiddatabase.manage_users.linkManageRoles}" />
+	            </a>
+	            <a href="jsp/admin/plugins/mylutece/modules/openiddatabase/RemoveUser.jsp?plugin_name=${plugin_name}&mylutece_database_user_id=${user.userId}">
+	                <img src="images/admin/skin/actions/delete.png" class="icon" alt="#i18n{module.mylutece.openiddatabase.manage_users.linkRemoveUser}" title="#i18n{module.mylutece.openiddatabase.manage_users.linkRemoveUser}" />
+	            </a>
+	        </td>
+        </tr>
+        </#list>
+    </table>
+    
+    <p>
+        <form action="jsp/admin/plugins/mylutece/modules/openiddatabase/CreateUser.jsp">
+            <input type="hidden" name="plugin_name" value="${plugin_name}" />
+            <input type="submit" class="button" value="#i18n{module.mylutece.openiddatabase.manage_users.btnCreateUser}" />
+        </form>
+    </p>
+</div>

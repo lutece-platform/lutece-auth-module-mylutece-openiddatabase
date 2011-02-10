@@ -1,0 +1,36 @@
+<div class="content-box" >
+    <h2>#i18n{module.mylutece.openiddatabase.manage_groups_user.tableTitle}</h2>
+    
+    <form method="post" action="jsp/admin/plugins/mylutece/modules/openiddatabase/DoAssignGroupsUser.jsp">
+        <input type="hidden" name="mylutece_database_user_id" value="${user.userId}" />
+        <table>
+            <tr>
+                <th>#i18n{module.mylutece.openiddatabase.manage_groups_user.colName}</th>
+                <th>#i18n{module.mylutece.openiddatabase.manage_groups_user.colLabel}</th>
+                <th></th>
+            </tr>
+            <#list group_list as group >
+            <tr>
+                <td>${group.groupKey}</td>
+                <td>${group.groupDescription}</td>
+                <td>
+                    <#assign checkedString = '' > 
+                    <#list user_group_list as user_group >
+                    <#if user_group.groupKey = group.groupKey >
+                    <#assign checkedString >
+                    checked="checked"
+                    </#assign>
+                    <#break>
+                    </#if>
+                    </#list>
+                    <input type="checkbox" class="checkbox" name="mylutece_database_group_key" value="${group.groupKey}" ${checkedString} />
+                       </td>
+            </tr>
+            </#list>
+        </table>
+        <p>
+            <input type="hidden" name="plugin_name" value="${plugin_name}" />
+            <input type="submit" class="button" value="#i18n{module.mylutece.openiddatabase.manage_groups_user.btnAssign}" />
+        </p>
+    </form>
+</div>
