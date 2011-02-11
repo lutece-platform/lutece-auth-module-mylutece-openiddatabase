@@ -46,6 +46,6 @@
     <scm>
         <connection>scm:svn:http://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</connection>
         <developerConnection>scm:svn:https://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</developerConnection>
-        <url>http://dev.lutece.paris.fr/viewvc/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</url>
+        <url>http://dev.lutece.paris.fr/viewvc/lutece/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</url>
     </scm>
 </project>
