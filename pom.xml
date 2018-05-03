@@ -1,50 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-	<parent>
-		<artifactId>lutece-plugins-pom</artifactId>
-		<groupId>fr.paris.lutece.plugins</groupId>
-		<version>3.7</version>
-	</parent>
-
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>fr.paris.lutece.plugins</groupId>
-	<artifactId>module-mylutece-openiddatabase</artifactId>
-	<packaging>lutece-plugin</packaging>
-	<version>0.9.3-SNAPSHOT</version>
-	<name>Lutece mylutece openid database module</name>
-
-	<repositories>
-		<repository>
-			<id>lutece</id>
-			<name>luteceRepository</name>
-			<url>http://dev.lutece.paris.fr/maven_repository</url>
-			<layout>default</layout>
-		</repository>
-	</repositories>
-
-	<dependencies>
-		<dependency>
-			<groupId>fr.paris.lutece.plugins</groupId>
-			<artifactId>plugin-mylutece</artifactId>
-			<version>[3.0.0,)</version>
-			<type>lutece-plugin</type>
-		</dependency>
-		<dependency>
-			<groupId>org.openid4java</groupId>
-			<artifactId>openid4java</artifactId>
-			<version>0.9.3</version>
-		</dependency>
-	</dependencies>
-
-	<properties>
-		<componentName>mylutece-openiddatabase</componentName>
-		<jiraProjectName>MYLUTECEOPENIDDATABASE</jiraProjectName>
-		<jiraComponentId>10207</jiraComponentId>
-	</properties>
-
+    <parent>
+        <artifactId>lutece-global-pom</artifactId>
+        <groupId>fr.paris.lutece.tools</groupId>
+        <version>3.0.12</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fr.paris.lutece.plugins</groupId>
+    <artifactId>module-mylutece-openiddatabase</artifactId>
+    <packaging>lutece-plugin</packaging>
+    <version>0.9.3-SNAPSHOT</version>
+    <name>Lutece mylutece openid database module</name>
+    <repositories>
+        <repository>
+            <id>lutece</id>
+            <name>luteceRepository</name>
+            <url>http://dev.lutece.paris.fr/maven_repository</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>fr.paris.lutece.plugins</groupId>
+            <artifactId>plugin-mylutece</artifactId>
+            <version>[3.0.0,)</version>
+            <type>lutece-plugin</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openid4java</groupId>
+            <artifactId>openid4java</artifactId>
+            <version>0.9.3</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <componentName>mylutece-openiddatabase</componentName>
+        <jiraProjectName>MYLUTECEOPENIDDATABASE</jiraProjectName>
+        <jiraComponentId>10207</jiraComponentId>
+    </properties>
     <scm>
-        <connection>scm:svn:http://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</connection>
-        <developerConnection>scm:svn:https://dev.lutece.paris.fr/svn/lutece/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</developerConnection>
-        <url>http://dev.lutece.paris.fr/viewvc/lutece/portal/trunk/plugins/authentication/module-mylutece-openiddatabase</url>
+        <connection>scm:git:https://github.com/lutece-platform/lutece-auth-module-mylutece-openiddatabase.git</connection>
+        <developerConnection>scm:git:https://github.com/lutece-platform/lutece-auth-module-mylutece-openiddatabase.git</developerConnection>
+        <url>https://github.com/lutece-platform/lutece-auth-module-mylutece-openiddatabase.git</url>
     </scm>
 </project>
